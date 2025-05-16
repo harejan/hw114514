@@ -28,7 +28,7 @@ my_image = (
     .first()
     .select('B.*')
 )
-vis_params = {'min':100, 'max': 3500, 'bands': ['B4', 'B3', 'B2']}
+vis_params1 = {'min':100, 'max': 3500, 'bands': ['B4', 'B3', 'B2']}
 
 training = my_image.sample(
     **{
