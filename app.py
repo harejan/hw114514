@@ -61,7 +61,7 @@ vis_params2 = {'min': 0, 'max': 7, 'palette': palette}
 
 # 顯示地圖
 Map = geemap.Map()
-my_Map.add_basemap('HYBRID')
+Map.add_basemap('HYBRID')
 left_layer = geemap.ee_tile_layer(my_image, vis_params1, 'false coler')
 right_layer = geemap.ee_tile_layer(result, vis_params2, 'wekakMeans classified land cover')
 Map.centerObject(my_image.geometry(), 10)
