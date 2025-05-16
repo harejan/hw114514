@@ -42,7 +42,7 @@ training = my_image.sample(
 n_clusters = 5
 clusterer_KMeans = ee.Clusterer.wekaKMeans(nClusters=n_clusters).train(training)
 
-result = my_image.cluster(clusterer_wekaKMeans)
+result = my_image.cluster(clusterer_KMeans)
 
 legend_dict = {
     'one': '#f0e4d4',
