@@ -46,7 +46,7 @@ result = my_image.cluster(clusterer_KMeans)
 
 legend_dict = {
     'one': '#f0e4d4',
-    'two': '#f9d9ca',
+    'two': '909fa6',
     'three': '#d18063',
     'four': '#917b56',
     'five': '#d2b5bb',
@@ -54,7 +54,7 @@ legend_dict = {
     'seven': '#ede1f0',
     'eight': '#ede1e3',
     'nine':'d1dfe8',
-    'ten':'909fa6'
+    'ten':'#f9d9ca'
 }
 palette = list(legend_dict.values())
 vis_params2 = {'min': 0, 'max': 7, 'palette': palette}
