@@ -28,6 +28,8 @@ my_image = (
     .first()
     .select('B.*')
 )
+vis_params = {'min':100, 'max': 3500, 'bands': ['B4', 'B3', 'B2']}
+
 training = my_image.sample(
     **{
         'region': my_image.geometry(),  # 若不指定，則預設為影像my_image的幾何範圍。
@@ -37,9 +39,9 @@ training = my_image.sample(
         'geometries': True,  # 設為False表示取樣輸出的點將忽略其幾何屬性(即所屬網格的中心點)，無法作為圖層顯示，可節省記憶體。
     }
 )
-vis_params1 = {'min':100, 'max': 3500, 'bands': ['B4', 'B3', 'B2']}
+n_clusters = 5
+clusterer_KMeans = ee.Clusterer.wekaKMeans(nClusters=n_clusters).train(training)
 
-clusterer_wekaKMeans = ee.Clusterer.wekaKMeans().train(training)
 result = my_image.cluster(clusterer_wekaKMeans)
 
 legend_dict = {
