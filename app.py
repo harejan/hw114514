@@ -49,11 +49,11 @@ legend_dict = {
     'two': '909fa6',
     'three': '#d18063',
     'four': '#917b56',
-    'five': '#d2b5bb',
+    'five': 'd1dfe8',
     'six': '#a2b59f',
     'seven': '#ede1f0',
     'eight': '#ede1e3',
-    'nine':'d1dfe8',
+    'nine':'#d2b5bb',
     'ten':'#f9d9ca'
 }
 palette = list(legend_dict.values())
