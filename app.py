@@ -16,7 +16,7 @@ credentials = service_account.Credentials.from_service_account_info(
 ee.Initialize(credentials)
 ###############################################
 st.set_page_config(layout="wide")
-st.title("🌍👁️👁️ 114514作業streamlit")
+st.title("😺114514作業streamlit")
 # 地理區域
 my_point = ee.Geometry.Point([120.5583462887228, 24.081653403304525])
 # 擷取 Landsat NDVI
@@ -67,4 +67,4 @@ right_layer = geemap.ee_tile_layer(result, vis_params2, 'wekakMeans classified l
 Map.centerObject(my_image.geometry(), 10)
 Map.split_map(left_layer, right_layer)
 Map.add_legend(title='Land Cover Type', legend_dict = legend_dict,draggable=False, position = 'bottomright')
-Map.to_streamlit(height=600, width=800)
+Map.to_streamlit(height=600, width=1200)
