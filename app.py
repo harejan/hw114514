@@ -67,4 +67,4 @@ right_layer = geemap.ee_tile_layer(result, vis_params2, 'wekakMeans classified l
 Map.centerObject(my_image.geometry(), 10)
 Map.split_map(left_layer, right_layer)
 Map.add_legend(title='Land Cover Type', legend_dict = legend_dict,draggable=False, position = 'bottomright')
-Map.to_streamlit(height=600, width=1200)
+Map.to_streamlit(height=800, width=1400)
